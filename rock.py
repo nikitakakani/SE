@@ -28,9 +28,13 @@ def get_computer_choice():
 def get_player_choice():
     return input("Enter rock, paper, or scissors: ").lower()
 
-def determine_winner(player, computer):
+def get_player_choice():
+    return input("Enter rock, paper, or scissors: ").lower()
 
-    if (player == "rock" and computer == "scissors") or \
+def determine_winner(player, computer):
+    if player == computer:
+        return "It's a tie!"
+    elif (player == "rock" and computer == "scissors") or \
          (player == "scissors" and computer == "paper") or \
          (player == "paper" and computer == "rock"):
         return "You win!"
